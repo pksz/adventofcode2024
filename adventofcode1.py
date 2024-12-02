@@ -2,7 +2,7 @@
 #sepatarte two lists by delimiter--sort
 #store diff
 #return a diff
-
+#------------------------------------part 1--------------------------------------------
 #read input
 delimiter=' '
 list1=[]
@@ -21,7 +21,7 @@ if input_file:
 list1.sort()
 list2.sort()
 
-print(list2)
+
 #store diff
 list3=[0]*1000
 for index in range(len(list1)):
@@ -34,3 +34,12 @@ for index in range(len(list1)):
        
 result=sum(list3)
 print(result)
+
+#--------------------------------------part 2-----------------------------------
+#finding similarity score
+score=0
+for i in list1:
+   if i in list2:
+      score+=int(i)*list2.count(i)
+
+print(score)
